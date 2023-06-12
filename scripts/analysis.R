@@ -64,6 +64,8 @@ table6 <- df %>%
   tbl_summary(type = all_categorical() ~ "categorical", 
               missing = "no")
 table6
+save_as_docx(table6, path = "tables/Table6.docx")
+
 
 # Table 7. Opinion of the respondents regarding safe marriage  
 table7 <- df %>% 
@@ -71,6 +73,7 @@ table7 <- df %>%
   tbl_summary(type = all_categorical() ~ "categorical", 
               missing = "no")
 table7
+save_as_docx(table7, path = "tables/Table7.docx")
 
 
 # Table 8. Factors associated with knowledge 
@@ -91,3 +94,4 @@ table8 <- df %>%
   as_flex_table() %>% 
   set_table_properties(width = 1, layout = "autofit")
 table8
+save_as_docx(table8, path = "tables/Table8.docx")
