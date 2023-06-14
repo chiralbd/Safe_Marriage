@@ -41,7 +41,7 @@ table4 <- df %>%
   select(`Field of Study`, 19:30) %>% 
   tbl_summary(type = all_categorical() ~ "categorical", 
               by = "Field of Study") %>% 
-  add_p()%>% 
+  add_p(test.args = all_tests("fisher.test") ~ list(workspace=2e9)) %>% 
   bold_p() %>% 
   as_flex_table()
 table4
