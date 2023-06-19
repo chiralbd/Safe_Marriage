@@ -62,7 +62,8 @@ save_as_docx(table5, path = "tables/Table5.docx")
 table6 <- df %>% 
   select(55:59) %>% 
   tbl_summary(type = all_categorical() ~ "categorical", 
-              missing = "no")
+              missing = "no") %>% 
+  as_flex_table()
 table6
 save_as_docx(table6, path = "tables/Table6.docx")
 
@@ -71,7 +72,8 @@ save_as_docx(table6, path = "tables/Table6.docx")
 table7 <- df %>% 
   select(60:66) %>% 
   tbl_summary(type = all_categorical() ~ "categorical", 
-              missing = "no")
+              missing = "no") %>% 
+  as_flex_table()
 table7
 save_as_docx(table7, path = "tables/Table7.docx")
 
